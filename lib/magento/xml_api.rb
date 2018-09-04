@@ -81,7 +81,7 @@ module Magento
     
     def method_missing(method, *args, &block)
       # convert the method name to an XMLRPC action name e.g. "sales_order.list"
-      parts = method.to_s.snakecase.split('_')
+      parts = method.to_s.split('_')
       action = "#{parts[0..-2].join('_')}.#{parts.last}" if parts.size > 1
       
       if action
