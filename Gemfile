@@ -14,4 +14,3 @@ group :development do
 end
 
 gem "savon"
-gem "xmlrpc"
