@@ -29,6 +29,7 @@ module Magento
       @timeout = options[:timeout] || 60
       @proxy = options[:proxy] || nil 
       @debug = options[:debug] || false
+      @session_id = options[:session_id] || nil
     end
     
     def call(method, *arguments)
